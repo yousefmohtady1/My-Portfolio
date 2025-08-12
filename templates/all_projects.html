@@ -1,0 +1,85 @@
+<!-- filepath: e:\programing\QwenPortfolio\Project_1\templates\all_projects.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>All Projects</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body>
+    <section id="all-projects">
+      <h2>All Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <a
+            href="{{ url_for('project1') }}"
+            style="text-decoration: none; color: inherit"
+          >
+            <div class="project-image">
+              <img
+                src="{{ url_for('static', filename='images/4020769.jpg') }}"
+                alt="Data Analysis Project"
+              />
+            </div>
+            <div class="info">
+              <h3>Data Analysis with Python</h3>
+              <p>
+                Applied Python libraries (Pandas, NumPy) for data preprocessing
+                and visualization. Implemented basic machine learning models for
+                prediction tasks.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="project-card">
+          <a
+            href="{{ url_for('project2') }}"
+            style="text-decoration: none; color: inherit"
+          >
+            <div class="project-image">
+              <img
+                src="{{ url_for('static', filename='images/7040859.jpg') }}"
+                alt="Web Development Project"
+              />
+            </div>
+            <div class="info">
+              <h3>Full Stack Web Application</h3>
+              <p>
+                Developed responsive web applications using Laravel framework.
+                Integrated MySQL databases and implemented MVC architecture
+                principles.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="project-card">
+          <a
+            href="{{ url_for('project3') }}"
+            style="text-decoration: none; color: inherit"
+          >
+            <div class="project-image">
+              <img
+                src="{{ url_for('static', filename='images/6620126.jpg') }}"
+                alt="Database Project"
+              />
+            </div>
+            <div class="info">
+              <h3>Database Design and Management</h3>
+              <p>
+                Designed and implemented relational databases using MySQL.
+                Applied normalization techniques and database administration
+                concepts.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="show-more-container">
+        <a href="{{ url_for('index') }}" class="show-more-btn">Back to Home</a>
+      </div>
+    </section>
+  </body>
+</html>

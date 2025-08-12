@@ -88,3 +88,19 @@ document.getElementById('contactForm')?.addEventListener('submit', function(e) {
         submitBtn.classList.remove('loading');
     });
 });
+
+// ...existing code...
+
+function revealOnScroll() {
+  const elements = document.querySelectorAll('.fade-up');
+  const windowHeight = window.innerHeight;
+  elements.forEach(el => {
+    const elementTop = el.getBoundingClientRect().top;
+    if (elementTop < windowHeight - 60) {
+      el.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('DOMContentLoaded', revealOnScroll);

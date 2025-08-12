@@ -1060,3 +1060,90 @@ footer {
         font-size: 1.3rem;
     }
 }
+
+/* Project Details Page Styling */
+#project-details {
+    max-width: 700px;
+    margin: 120px auto 60px auto;
+    background: linear-gradient(135deg, var(--primary-bg) 60%, var(--secondary-bg) 100%);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px var(--shadow);
+    padding: 48px 32px 32px 32px;
+    text-align: center;
+    color: var(--text-primary);
+    border: 1.5px solid var(--border);
+}
+
+#project-details h2 {
+    font-family: var(--heading-font);
+    color: var(--accent);
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+#project-details img {
+    max-width: 350px;
+    width: 100%;
+    border-radius: 18px;
+    margin-bottom: 28px;
+    box-shadow: 0 6px 24px var(--shadow);
+    border: 3px solid var(--border);
+    background: var(--primary-bg);
+}
+
+#project-details p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 36px;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+#project-details .show-more-btn,
+#project-details a.show-more-btn {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    color: white;
+    padding: 12px 36px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0 5px 15px rgba(44, 62, 80, 0.18);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-block;
+    cursor: pointer;
+}
+
+#project-details .show-more-btn:hover,
+#project-details a.show-more-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 24px rgba(44, 62, 80, 0.28);
+    color: white;
+}
+
+/* Animation: Fade Up */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1.5s cubic-bezier(0.23, 1, 0.32, 1), transform 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: opacity, transform;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeUp 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+}

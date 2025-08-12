@@ -1,0 +1,29 @@
+<!-- filepath: e:\programing\QwenPortfolio\Project_1\templates\project3.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Database Design and Management - Project Details</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body>
+    <section id="project-details">
+      <h2>Database Design and Management</h2>
+      <img
+        src="{{ url_for('static', filename='images/6620126.jpg') }}"
+        alt="Database Project"
+        style="max-width: 400px; border-radius: 15px"
+      />
+      <p>
+        Designed and implemented relational databases using MySQL.<br />
+        Applied normalization techniques and database administration concepts.
+      </p>
+      <a href="{{ url_for('all_projects') }}" class="show-more-btn"
+        >Back to All Projects</a
+      >
+    </section>
+  </body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yousef Mohtady - Data Scientist</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- EmailJS CDN -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item">
+            <a href="#experience" class="nav-link">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="https://drive.google.com/file/d/1vDfUc8HzmpIlZ-csMNIZiT2Qu0hzSGc-/view"
+              class="nav-link download-btn"
+              >Download Resume</a
+            >
+          </li>
+        </ul>
+        <div class="nav-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+      <div class="content">
+        <img
+          class="portrait"
+          src="{{ url_for('static', filename='images/2025_07_02_08_35_IMG_1110.JPG') }}"
+          alt="Yousef Mohtady"
+        />
+        <div class="content-title">
+          <h1>Yousef Mohtady</h1>
+          <p class="subtitle">AI & Data Science Engineer</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Computer Science and Mathematics graduate from Helwan University with a
+        strong interest in artificial intelligence and data science. Currently
+        enrolled in AI and Data Science training at DEPI, gaining hands-on
+        experience with data preprocessing, machine learning algorithms, and
+        Python programming.
+        <br /><br />
+        Solid background in web development using Laravel, HTML, CSS, and MySQL.
+        Motivated to deepen expertise in AI, work on real-world data-driven
+        projects, and contribute to innovative solutions in technology.
+      </p>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements">
+      <h2>Achievements</h2>
+      <div class="achievements-grid">
+        <div class="achievement-card">
+          <div class="achievement-icon">🎓</div>
+          <h3>Academic Excellence</h3>
+          <p>B.Sc. in Mathematics and Computer Science with 70.61% grade</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">🚀</div>
+          <h3>Training Completion</h3>
+          <p>Currently enrolled in AI and Data Science training at DEPI</p>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">💻</div>
+          <h3>Web Development</h3>
+          <p>Summer training in Full Stack Web Development at ITI</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>Data Science and AI Training</h3>
+            <span class="date">Jun 2025 - Ongoing</span>
+            <p>
+              • Learning Python for data analysis and machine learning<br />
+              • Practicing with tools like Pandas, NumPy, Matplotlib, and
+              Scikit-learn<br />
+              • Gaining practical skills in model evaluation, feature
+              engineering, and supervised learning
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>Full Stack Web Developer</h3>
+            <span class="date">Jul 2024 - Aug 2024</span>
+            <p>
+              • Built responsive applications using Laravel, PHP, and MySQL<br />
+              • Practiced database integration, routing, and MVC structure<br />
+              • Worked in collaborative environments simulating real development
+              teams<br />
+              • Designed and managed MySQL databases and relationships
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>B.Sc. in Mathematics and Computer Science</h3>
+            <span class="date">Graduated: 2025</span>
+            <p>
+              • Grade: 70.61% – Good (Equivalent to GPA~ 2.82/4.0)<br />
+              • Faculty of Science, Helwan University
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+              alt="Data Analysis Project"
+            />
+          </div>
+          <div class="info">
+            <h3>Data Analysis with Python</h3>
+            <p>
+              Applied Python libraries (Pandas, NumPy) for data preprocessing
+              and visualization. Implemented basic machine learning models for
+              prediction tasks.
+            </p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+              alt="Web Development Project"
+            />
+          </div>
+          <div class="info">
+            <h3>Full Stack Web Application</h3>
+            <p>
+              Developed responsive web applications using Laravel framework.
+              Integrated MySQL databases and implemented MVC architecture
+              principles.
+            </p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+            <img
+              src="https://images.unsplash.com/photo-1556740718-4c728a5b1c00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+              alt="Database Project"
+            />
+          </div>
+          <div class="info">
+            <h3>Database Design and Management</h3>
+            <p>
+              Designed and implemented relational databases using MySQL. Applied
+              normalization techniques and database administration concepts.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="show-more-container">
+        <a href="#" class="show-more-btn">Show More Projects</a>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+      <h2>Testimonials</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="quote">
+            "Yousef demonstrated strong analytical thinking and technical skills
+            during his training."
+          </div>
+          <div class="client">- DEPI Training Coordinator</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="quote">
+            "Excellent problem-solving abilities and teamwork skills in
+            development projects."
+          </div>
+          <div class="client">- ITI Summer Training Supervisor</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Expertise</h2>
+      <div class="skills-list">
+        <div class="skill-item">Python for Data Analysis</div>
+        <div class="skill-item">Machine Learning</div>
+        <div class="skill-item">Data Preprocessing</div>
+        <div class="skill-item">Laravel Framework</div>
+        <div class="skill-item">MySQL Database</div>
+        <div class="skill-item">Web Development</div>
+        <div class="skill-item">Statistics & Probability</div>
+        <div class="skill-item">Git & GitHub</div>
+      </div>
+    </section>
+
+    <!-- Social Connect -->
+    <section id="social-connect">
+      <h2>Connect With Me</h2>
+      <div class="social-connect-grid">
+        <a
+          href="https://linkedin.com/in/yosef-mohtady-39749131a/"
+          class="social-connect-card"
+          target="_blank"
+        >
+          <div class="social-icon-large">
+            <i class="fab fa-linkedin"></i>
+          </div>
+          <h3>LinkedIn</h3>
+          <p>Connect professionally</p>
+        </a>
+
+        <a
+          href="https://github.com/yousefmohtady1"
+          class="social-connect-card"
+          target="_blank"
+        >
+          <div class="social-icon-large">
+            <i class="fab fa-github"></i>
+          </div>
+          <h3>GitHub</h3>
+          <p>View my projects</p>
+        </a>
+
+        <a
+          href="https://x.com/YosefMohtady"
+          class="social-connect-card"
+          target="_blank"
+        >
+          <div class="social-icon-large">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <h3>X</h3>
+          <p>Follow for updates</p>
+        </a>
+
+        <a href="mailto:yosefmohtady@gmail.com" class="social-connect-card">
+          <div class="social-icon-large">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3>Email</h3>
+          <p>Send me a message</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+      <h2>Get In Touch</h2>
+      <div class="contact-container">
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Type your message here..."
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" id="submitBtn" class="submit-btn">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-loading" style="display: none">Sending...</span>
+          </button>
+        </form>
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="info-icon">📧</div>
+            <div class="info-content">
+              <h3>Email</h3>
+              <p>yosefmohtady@gmail.com</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div class="info-content">
+              <h3>Location</h3>
+              <p>Cairo, Egypt</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">💼</div>
+            <div class="info-content">
+              <h3>Available for</h3>
+              <p>Freelance & Full-time</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="messageResult" class="message-result"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-main">
+          <p>&copy; 2024 Yousef Mohtady. All rights reserved.</p>
+          <div class="social-icons">
+            <a
+              href="https://linkedin.com/in/yosef-mohtady-39749131a/"
+              class="social-icon"
+              target="_blank"
+              title="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/yousefmohtady1"
+              class="social-icon"
+              target="_blank"
+              title="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://x.com/YosefMohtady"
+              class="social-icon"
+              target="_blank"
+              title="X"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </a>
+            <a
+              href="mailto:yosefmohtady@gmail.com"
+              class="social-icon"
+              title="Email"
+            >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

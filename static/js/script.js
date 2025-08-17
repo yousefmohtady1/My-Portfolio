@@ -184,7 +184,7 @@ class PortfolioApp {
         const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
 
         const observerOptions = {
-            threshold: 0.3,
+            threshold: 0.1,
             rootMargin: '-80px 0px -50% 0px'
         };
 

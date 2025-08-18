@@ -114,6 +114,20 @@ body {
   align-items: center;
 }
 
+.nav-logo{
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 700;
+  margin-right: auto;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: none;
+}
+
 .nav-link {
   text-decoration: none;
   color: var(--text-secondary);
@@ -861,6 +875,7 @@ section {
   margin: 0 0 var(--spacing-sm) 0;
   color: var(--text-primary);
   font-size: 1.2rem;
+  text-align: left;
 }
 
 .info-content p {
@@ -961,6 +976,10 @@ footer {
     display: flex;
   }
 
+  .nav-logo {
+    display: block;
+  }
+
   .hero {
     padding: var(--spacing-xl) var(--spacing-md);
     min-height: 90vh;
@@ -1008,6 +1027,11 @@ footer {
 @media (max-width: 480px) {
   .nav-container {
     padding: 0 var(--spacing-md);
+  }
+
+    .nav-logo {
+    display: block;
+    font-size: 1.5rem;
   }
 
   .hero {
@@ -1122,4 +1146,8 @@ footer {
   .client {
     font-size: 0.9rem;
   }
+
+  .project-card .info {
+  padding: 0px;
+}
 }

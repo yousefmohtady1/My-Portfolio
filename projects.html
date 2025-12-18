@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Projects | Yousef Mohtady</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Ionicons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container nav-content">
+        <a href="index.html" class="logo">YM.</a>
+        <ul class="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#education">Education</a></li>
+          <li><a href="index.html#training">Training</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li>
+            <a
+              href="https://drive.google.com/file/d/19qezFHJTuDiCi08FCuPChpSPMmfS_OBd/view?usp=sharing"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fas fa-download" style="margin-right: 8px"></i> Resume
+            </a>
+            <!-- Theme Toggle -->
+          </li>
+
+          <li>
+            <button
+              id="theme-toggle"
+              class="btn btn-link"
+              style="font-size: 1.2rem; margin-left: 10px"
+            >
+              <ion-icon name="moon-outline"></ion-icon>
+            </button>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container" style="padding-top: 120px; padding-bottom: 50px">
+      <h1 style="text-align: center; margin-bottom: 3rem">All Projects</h1>
+
+      <div class="projects-grid limit-two-columns">
+        <!-- Project 1 (Same as Home) -->
+        <div class="project-card animate-on-scroll fade-up">
+          <div class="project-info">
+            <h3>Qanouny AI-Powered Legal Assistant</h3>
+            <h4>(DEPI Pioneer Graduation Project)</h4>
+            <h4>AI Team Leader</h4>
+            <ul class="description">
+              <li>
+                Led the AI team and collaborated cross-functionally with Data
+                Engineering and Flutter teams to design and deliver a
+                production-ready RAG-based legal AI system.
+              </li>
+              <li>
+                Architected an end-to-end multi-modal AI pipeline (text, audio,
+                image, PDF), integrating OCR, speech-to-text, embeddings, and
+                LLM reasoning into a unified backend.
+              </li>
+              <li>
+                Designed and implemented a vector-based legal retrieval layer in
+                coordination with the Data Engineering team, ensuring scalable,
+                source-grounded, and auditable legal responses.
+              </li>
+              <li>
+                Worked closely with the Flutter team to align AI outputs with
+                user experience requirements, including risk indicators
+                (Red/Amber/Green), simplified legal language, and explainable
+                responses.
+              </li>
+            </ul>
+            <div class="tech-stack">
+              <span>RAG</span>
+              <span>OCR</span>
+              <span>Speech-to-text</span>
+              <span>Embeddings</span>
+              <span>LLM Reasoning</span>
+              <span>Groq API</span>
+              <span>FastAPI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 (Same as Home) -->
+        <div class="project-card animate-on-scroll fade-up delay-1">
+          <div class="project-info">
+            <h3>CorpGuideAI - Intelligent HR Policy Assistant</h3>
+            <ul class="description">
+              <li>
+                Developed a production-ready RAG application to automate HR
+                inquiries, utilizing LangChain and Llama 4 (via Groq) to achieve
+                sub-2-second inference latency.
+              </li>
+              <li>
+                Implemented Semantic Chunking to optimize vector retrieval
+                accuracy for bilingual policy documents, significantly
+                outperforming traditional fixed-size chunking methods.
+              </li>
+              <li>
+                Engineered a robust microservices architecture by decoupling the
+                FastAPI backend (Dockerized on Hugging Face) from the frontend
+                (Vercel), featuring a self-healing database mechanism for error
+                resilience.
+              </li>
+            </ul>
+            <div class="tech-stack">
+              <span>LangChain</span>
+              <span>FastAPI</span>
+              <span>RAG</span>
+              <span>Groq API</span>
+              <span>Semantic Chunking</span>
+              <span>Hugging Face</span>
+              <span>Vercal</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/yousefmohtady1/CorpGuideAI-HR-Policy-Assistant"
+                class="btn btn-sm"
+                >View Code <ion-icon name="logo-github"></ion-icon
+              ></a>
+              <a
+                href="https://corp-guide-ai.vercel.app/"
+                class="btn btn-sm btn-outline"
+                >Live Demo <ion-icon name="open-outline"></ion-icon
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 (Example) -->
+        <div class="project-card animate-on-scroll fade-up delay-2">
+          <div class="project-info">
+            <h3>Customer Churn Prediction</h3>
+            <ul class="description">
+              <li>
+                Built and evaluated a customer-churn prediction pipeline using
+                models like LightGBM, XGBoost, and RandomForest; LightGBM
+                achieved AUC ≈ 0.836 and recall ≈ 0.82, proving strong ability
+                to detect likely churners.
+              </li>
+              <li>
+                Implemented customer segmentation via K-Means clustering
+                (integrating churn probability as a feature) to identify
+                high-risk segments and support targeted retention strategies.
+              </li>
+              <li>
+                Developed an interactive dashboard (with Streamlit) that
+                visualizes churn risk and cluster- level metrics, enabling clear
+                actionable insights for business decision-making (e.g. retention
+                campaigns).
+              </li>
+            </ul>
+            <div class="tech-stack">
+              <span>LangChain</span>
+              <span>FastAPI</span>
+              <span>RAG</span>
+              <span>Groq API</span>
+              <span>Semantic Chunking</span>
+              <span>Hugging Face</span>
+              <span>Vercal</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/yousefmohtady1/Customer_Churn_Prediction_and_Segmentation"
+                class="btn btn-sm"
+                >View Code <ion-icon name="logo-github"></ion-icon
+              ></a>
+              <a
+                href="https://www.kaggle.com/code/yosefmohtady/customer-churn-prediction-and-segmentation"
+                class="btn btn-sm btn-outline"
+                >View Notebook
+                <i class="fab fa-kaggle" style="margin-left: 5px"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="center-btn">
+        <a href="index.html" class="btn btn-secondary"
+          ><ion-icon name="arrow-back-outline"></ion-icon> Back to Home</a
+        >
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Yousef Mohtady. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

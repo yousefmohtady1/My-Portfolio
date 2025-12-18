@@ -3,714 +3,491 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yousef Mohtady - Data Scientist</title>
+    <title>Yousef Mohtady | Junior Data Scientist</title>
     <meta
       name="description"
-      content="Yousef Mohtady - AI & Data Science Engineer. Computer Science & Mathematics graduate specializing in data analysis, machine learning, and web development."
+      content="Portfolio of Yousef Mohtady, a Junior Data Scientist and Frontend Developer."
     />
-    <meta
-      name="keywords"
-      content="Data Science, AI, Machine Learning, Python, Web Development, Computer Science"
-    />
-    <meta name="author" content="Yousef Mohtady" />
-
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- FontAwesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="static/css/styles.css" />
-    <link rel="icon" href="static/images/favicon2.png" />
-    <link rel="manifest" href="manifest.json" />
-    <link rel="canonical" href="https://yousef-mohtady.com/" />
-
-    <!-- Open Graph Meta Tags -->
-    <meta
-      property="og:title"
-      content="Yousef Mohtady - AI & Data Science Engineer"
-    />
-    <meta
-      property="og:description"
-      content="Computer Science & Mathematics graduate specializing in data analysis, machine learning, and web development."
-    />
-    <meta
-      property="og:image"
-      content="https://yousef-mohtady.com/static/images/2025_07_02_08_35_IMG_1110.JPG"
-    />
-    <meta property="og:url" content="https://yousef-mohtady.com/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Yousef Mohtady Portfolio" />
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Yousef Mohtady - AI & Data Science Engineer"
-    />
-    <meta
-      name="twitter:description"
-      content="Computer Science & Mathematics graduate specializing in data analysis, machine learning, and web development."
-    />
-    <meta
-      name="twitter:image"
-      content="https://yousef-mohtady.com/static/images/2025_07_02_08_35_IMG_1110.JPG"
-    />
-
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#3b82f6" />
-    <meta name="msapplication-TileColor" content="#3b82f6" />
-
+    <!-- EmailJS SDK -->
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init("DuCcvLzFGeYmbowpg");
+      })();
+    </script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Ionicons for Icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </head>
   <body>
+    <!-- Navigation -->
     <nav class="navbar">
-      <div class="nav-container">
-        <a href="#" class="nav-logo">Yousef Mohtady</a>
-        <ul class="nav-menu">
-          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-          <li class="nav-item">
-            <a href="#education" class="nav-link">Education</a>
-          </li>
-          <li class="nav-item">
-            <a href="#training" class="nav-link">Training</a>
-          </li>
-          <li class="nav-item">
-            <a href="#skills" class="nav-link">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a href="#projects" class="nav-link">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a href="#contact" class="nav-link">Contact</a>
-          </li>
-          <li class="nav-item">
+      <div class="container nav-content">
+        <a href="#" class="logo">YM.</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#training">Training</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
             <a
               href="https://drive.google.com/file/d/19qezFHJTuDiCi08FCuPChpSPMmfS_OBd/view?usp=sharing"
-              class="nav-link download-btn"
+              class="btn btn-primary"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i class="fas fa-download"></i>
-              Resume
+              <i class="fas fa-download" style="margin-right: 8px"></i> Resume
             </a>
+            <!-- Theme Toggle -->
+          </li>
+
+          <li>
+            <button
+              id="theme-toggle"
+              class="btn btn-link"
+              style="font-size: 1.2rem; margin-left: 10px"
+            >
+              <ion-icon name="moon-outline"></ion-icon>
+            </button>
           </li>
         </ul>
-        <div class="nav-toggle" id="mobile-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
     </nav>
 
-    <header class="hero">
-      <div class="content">
-        <img
-          class="portrait fade-up"
-          src="static/images/2025_07_02_08_35_IMG_1110.JPG"
-          alt="Yousef Mohtady - Professional Portrait"
-          loading="lazy"
-        />
-        <div class="content-title fade-up">
-          <h1>Yousef Mohtady</h1>
-          <p class="subtitle fade-up">Data Scientist</p>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h2 class="animate-on-scroll fade-up">Hello, I'm Yousef Mohtady</h2>
+          <h1 class="animate-on-scroll fade-up delay-1">
+            Junior Data Scientist
+          </h1>
+          <p class="animate-on-scroll fade-up delay-2">
+            Transforming raw data into actionable insights and building
+            innovative AI-powered solutions.
+          </p>
+          <div class="cta-buttons animate-on-scroll fade-up delay-3">
+            <a href="#projects" class="btn btn-primary">View Work</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-image animate-on-scroll fade-left delay-2">
+          <div class="img-box">
+            <img src="assets/profile.jpg" alt="Yousef Mohtady" />
+          </div>
         </div>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <section id="about">
-        <div class="container">
-          <h2 class="fade-up">About Me</h2>
-          <p class="fade-up">
-            "Where data intelligence meets precision engineering."
-            <br /><br />
-            A distinguished Computer Science & Mathematics graduate from Helwan
-            University, I merge analytical rigor with creative problem-solving.
-            Currently refining my expertise in AI & Data Science through DEPI's
-            advanced training program, mastering the art of transforming raw
-            data into strategic insights.
-            <br /><br />
-            Equipped with proven skills in Laravel, HTML, CSS, and MySQL, I
-            deliver solutions that are not only functional, but elegantly
-            engineered—designed to meet the highest standards of innovation and
-            sophistication. My work reflects a commitment to excellence,
-            ensuring every project resonates with precision, performance, and
-            purpose.
-            <br /><br />
-            Let's connect and explore how we can drive innovation together.
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll fade-up">About Me</h2>
+        <div class="section-content animate-on-scroll fade-up">
+          <p>
+            <h3>Bridging Mathematical Theory with Practical AI.</h3>
+                <p>
+                    I am a Junior Data Scientist with a rigorous academic background in Mathematics and Computer Science. My approach to data goes beyond code; I apply mathematical principles to solve complex analytical problems. This foundation was strengthened by the intensive Digital Egypt Pioneers Initiative (DEPI) training.
+                </p>
+                <p>
+                    In the practical field, I specialize in Machine Learning and Generative AI. I served as the AI Team Leader for "Qanouny", where I architected a production-ready RAG-based legal assistant, managing multi-modal pipelines and leading cross-functional collaboration.
+                </p>
+                <p>
+                    I am proficient in the Python ecosystem and experienced in transforming raw data into clear, actionable business insights. I am eager to apply my skills to build innovative data solutions that drive strategic decision-making.
+                </p>
           </p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="education">
-        <div class="container">
-          <h2 class="fade-up">Education</h2>
-          <div class="education-grid">
-            <article class="edu-card fade-up">
-              <div class="edu-header">
-                <img
-                  src="static/images/helwan.jpeg"
-                  alt="Helwan University Logo"
-                  class="edu-logo"
-                  loading="lazy"
-                />
-                <div class="edu-info">
-                  <h3>B.Sc. in Mathematics and Computer Science</h3>
-                  <p class="edu-org">Faculty of Science, Helwan University</p>
-                  <p class="edu-date">2021 – 2025</p>
-                </div>
-              </div>
-              <ul class="edu-points">
+    <!-- Education Section -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll fade-up">Education</h2>
+        <div class="timeline">
+          <!-- Education Item 1 -->
+          <div class="timeline-item animate-on-scroll fade-left">
+            <div class="timeline-content">
+              <h3>B.Sc. in Mathematics and Computer Science</h3>
+              <span class="date">2021 – 2025</span>
+              <p>Faculty of Science, Helwan University</p>
+              <ul class="description">
                 <li>
                   Graduated with a grade of 70.61% (Good), equivalent to GPA
                   ~2.82/4.0
                 </li>
+                <li>Major: in Mathematics and Computer Science</li>
+              </ul>
+              <a
+                href="https://drive.google.com/file/d/1yHH8H2YmVOjWFU7VnmnewIhJKqyAVEkj/view?usp=sharing"
+                target="_blank"
+                class="btn btn-sm btn-link"
+                >Show Certificate
+                <ion-icon name="document-text-outline"></ion-icon
+              ></a>
+            </div>
+          </div>
+          <!-- Add more items as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Training Section -->
+    <section id="training" class="section">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll fade-up">Training</h2>
+        <div class="card-grid">
+          <!-- Training Item 1 -->
+          <div class="card animate-on-scroll fade-up">
+            <h3>AI and Data Science Training</h3>
+            <p class="institution">Digital Egypt Pioneers Initiative (DEPI)</p>
+            <ul class="description">
+              <li>
+                Mastered the Data Science lifecycle, performing rigorous EDA and
+                building optimized Machine Learning models using Pandas, NumPy,
+                and Scikit-learn.
+              </li>
+              <li>
+                Implemented advanced Generative AI solutions, developing RAG
+                pipelines and integrating Large Language Models (LLMs) using
+                Hugging Face libraries.
+              </li>
+            </ul>
+            <a href="#" target="_blank" class="btn btn-sm btn-link"
+              >Show Certificate
+              <ion-icon name="document-text-outline"></ion-icon
+            ></a>
+          </div>
+          <!-- Training Item 2 -->
+          <div class="card animate-on-scroll fade-up delay-1">
+            <h3>Full-Stack Web Development</h3>
+            <p class="institution">Information Technology Institute (ITI)</p>
+            <ul class="description">
+              <li>
+                Developed responsive web applications using PHP and Laravel,
+                gaining hands-on experience with MVC architecture and
+                collaborative development workflows.
+              </li>
+              <li>
+                Designed and managed relational databases using MySQL, ensuring
+                efficient data integration and normalization for scalable web
+                solutions.
+              </li>
+            </ul>
+            <a
+              href="https://drive.google.com/file/d/1IHqgTbOOD9BBZqh6JhuAW1Iihnsy58Du/view?usp=sharing"
+              target="_blank"
+              class="btn btn-sm btn-link"
+              >Show Certificate
+              <ion-icon name="document-text-outline"></ion-icon
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll fade-up">Skills</h2>
+        <div class="skills-wrapper animate-on-scroll fade-up">
+          <div class="skill-category">
+            <h3>Technical Skills</h3>
+            <div class="skill-tags">
+              <span>Python</span>
+              <span>SQL</span>
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>Machine Learning</span>
+              <span>Pandas</span>
+              <span>Numpy</span>
+              <span>Scikit-learn</span>
+              <span>Seaborn</span>
+              <span>Matplotlib</span>
+              <span>Plotly</span>
+              <span>Dash</span>
+              <span>MLflow</span>
+              <span>BeautifulSoup</span>
+              <span>MySQL</span>
+              <span>Database Design</span>
+              <span>Normalization</span>
+              <span>Git</span>
+              <span>GitHub</span>
+              <span>Object-Oriented Programming (OOP)</span>
+              <span>Algorithms & Data Structures</span>
+              <span>Agile Methodology</span>
+              <span>Waterfall Model</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Soft Skills</h3>
+            <div class="skill-tags">
+              <span>Problem Solving</span>
+              <span>Quick and Self Learning</span>
+              <span>Teamwork and Collaboration</span>
+              <span>Time Management</span>
+              <span>Adaptability</span>
+              <span>Communication</span>
+              <span>Leadership</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll fade-up">
+          Featured Projects
+        </h2>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card animate-on-scroll fade-up">
+            <div class="project-info">
+              <h3>Qanouny AI-Powered Legal Assistant</h3>
+              <h4>(DEPI Pioneer Graduation Project)</h4>
+              <h4>AI Team Leader</h4>
+              <ul class="description">
                 <li>
-                  <strong>Major:</strong> in Mathematics and Computer Science
+                  Led the AI team and collaborated cross-functionally with Data
+                  Engineering and Flutter teams to design and deliver a
+                  production-ready RAG-based legal AI system.
+                </li>
+                <li>
+                  Architected an end-to-end multi-modal AI pipeline (text,
+                  audio, image, PDF), integrating OCR, speech-to-text,
+                  embeddings, and LLM reasoning into a unified backend.
+                </li>
+                <li>
+                  Designed and implemented a vector-based legal retrieval layer
+                  in coordination with the Data Engineering team, ensuring
+                  scalable, source-grounded, and auditable legal responses.
+                </li>
+                <li>
+                  Worked closely with the Flutter team to align AI outputs with
+                  user experience requirements, including risk indicators
+                  (Red/Amber/Green), simplified legal language, and explainable
+                  responses.
                 </li>
               </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="training">
-        <div class="container">
-          <h2 class="fade-up">Training</h2>
-          <div class="education-grid">
-            <article class="edu-card fade-up">
-              <div class="edu-header">
-                <img
-                  src="static/images/depi.jpeg"
-                  alt="DEPI Logo"
-                  class="edu-logo"
-                  loading="lazy"
-                />
-                <div class="edu-info">
-                  <h3>AI and Data Science Training</h3>
-                  <p class="edu-org">
-                    Digital Egypt Pioneers Initiative (DEPI)
-                  </p>
-                  <p class="edu-date">Jun 2025 - Ongoing</p>
-                </div>
+              <div class="tech-stack">
+                <span>RAG</span>
+                <span>OCR</span>
+                <span>Speech-to-text</span>
+                <span>Embeddings</span>
+                <span>LLM Reasoning</span>
+                <span>Groq API</span>
+                <span>FastAPI</span>
               </div>
-              <ul class="edu-points">
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="project-card animate-on-scroll fade-up delay-1">
+            <div class="project-info">
+              <h3>CorpGuideAI - Intelligent HR Policy Assistant</h3>
+              <ul class="description">
                 <li>
-                  Developing strong skills in Python programming for data
-                  analysis and machine learning.
+                  Developed a production-ready RAG application to automate HR
+                  inquiries, utilizing LangChain and Llama 4 (via Groq) to
+                  achieve sub-2-second inference latency.
                 </li>
                 <li>
-                  Performing Exploratory Data Analysis (EDA) using Pandas,
-                  NumPy, Matplotlib, and Seaborn to identify trends and
-                  patterns.
+                  Implemented Semantic Chunking to optimize vector retrieval
+                  accuracy for bilingual policy documents, significantly
+                  outperforming traditional fixed-size chunking methods.
                 </li>
                 <li>
-                  Applying data preprocessing techniques including cleaning,
-                  encoding, scaling, and feature selection to prepare data for
-                  modeling.
-                </li>
-                <li>
-                  Building and evaluating supervised learning models using
-                  Scikit-learn with a focus on performance metrics and
-                  optimization.
-                </li>
-                <li>
-                  Practicing data visualization and storytelling to communicate
-                  insights effectively.
+                  Engineered a robust microservices architecture by decoupling
+                  the FastAPI backend (Dockerized on Hugging Face) from the
+                  frontend (Vercel), featuring a self-healing database mechanism
+                  for error resilience.
                 </li>
               </ul>
-            </article>
-
-            <article class="edu-card fade-up">
-              <div class="edu-header">
-                <img
-                  src="static/images/iti.jpeg"
-                  alt="ITI Logo"
-                  class="edu-logo"
-                  loading="lazy"
-                />
-                <div class="edu-info">
-                  <h3>Full-Stack Web Development</h3>
-                  <p class="edu-org">Information Technology Institute (ITI)</p>
-                  <p class="edu-date">Jul 2024 - Aug 2024</p>
-                </div>
+              <div class="tech-stack">
+                <span>LangChain</span>
+                <span>FastAPI</span>
+                <span>RAG</span>
+                <span>Groq API</span>
+                <span>Semantic Chunking</span>
+                <span>Hugging Face</span>
+                <span>Vercal</span>
               </div>
-              <ul class="edu-points">
-                <li>
-                  Practiced backend logic implementation using Laravel and PHP
-                </li>
-                <li>
-                  Applied database design principles to build dynamic systems
-                  with MySQL
-                </li>
-                <li>
-                  Practiced database integration, routing, MVC structure, and
-                  clean code practices
-                </li>
-                <li>
-                  Collaborated with a team to simulate real-world project
-                  environments
-                </li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- <section id="testimonials">
-        <div class="container">
-          <h2 class="fade-up">Testimonials</h2>
-          <div class="testimonial-grid">
-            <article class="testimonial-card fade-up">
-              <div class="quote">
-                "Yousef demonstrated strong analytical thinking and technical
-                skills during his training."
-              </div>
-              <div class="client">- DEPI Training Coordinator</div>
-            </article>
-            <article class="testimonial-card fade-up">
-              <div class="quote">
-                "Excellent problem-solving abilities and teamwork skills in
-                development projects."
-              </div>
-              <div class="client">- ITI Summer Training Supervisor</div>
-            </article>
-          </div>
-        </div>
-      </section> -->
-
-      <section id="skills">
-        <div class="container">
-          <h2 class="fade-up">Skills</h2>
-          <div class="skills-container fade-up">
-            <article class="skill-category">
-              <h3 class="category-title">
-                <i class="fas fa-code"></i>
-                Programming Languages
-              </h3>
-              <div class="skills-grid">
-                <div class="skill-card">
-                  <i class="fab fa-python"></i>
-                  <span>Python</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fas fa-database"></i>
-                  <span>SQL</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fab fa-html5"></i>
-                  <span>HTML5</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fab fa-css3-alt"></i>
-                  <span>CSS3</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fab fa-php"></i>
-                  <span>PHP</span>
-                </div>
-              </div>
-            </article>
-            <article class="skill-category">
-              <h3 class="category-title">
-                <i class="fas fa-server"></i>
-                Databases
-              </h3>
-              <div class="skills-grid">
-                <div class="skill-card">
-                  <i class="fas fa-database"></i>
-                  <span>MySQL</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fas fa-project-diagram"></i>
-                  <span>Database Design</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fas fa-sitemap"></i>
-                  <span>Data Modeling</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fas fa-compress-alt"></i>
-                  <span>Normalization</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="skill-category">
-              <h3 class="category-title">
-                <i class="fas fa-cogs"></i>
-                Software Engineering
-              </h3>
-              <div class="skills-grid">
-                <div class="skill-card">
-                  <i class="fas fa-cube"></i>
-                  <span>Object-Oriented Programming (OOP)</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fas fa-sync-alt"></i>
-                  <span>Full SDLC</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fas fa-puzzle-piece"></i>
-                  <span>Problem Solving</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fas fa-sitemap"></i>
-                  <span>Algorithms & Data Structures</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fas fa-vial"></i>
-                  <span>Unit Testing</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fas fa-users"></i>
-                  <span>Agile Methodology</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fas fa-lightbulb"></i>
-                  <span>Prototyping</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fas fa-water"></i>
-                  <span>Waterfall Model</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="skill-category">
-              <h3 class="category-title">
-                <i class="fas fa-layer-group"></i>
-                Frameworks & Libraries
-              </h3>
-              <div class="skills-grid">
-                <div class="skill-card">
-                  <i class="fab fa-laravel"></i>
-                  <span>Laravel (PHP)</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fas fa-utensil-spoon"></i>
-                  <span>Beautiful Soup (Python)</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fas fa-paw"></i>
-                  <span>Pandas</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fas fa-cube"></i>
-                  <span>NumPy</span>
-                </div>
-
-                <!-- Machine learning & ML tools -->
-                <div class="skill-card">
-                  <i class="fas fa-brain"></i>
-                  <span>Scikit-learn</span>
-                </div>
-
-                <!-- Visualization -->
-                <div class="skill-card">
-                  <i class="fas fa-chart-line"></i>
-                  <span>Matplotlib</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fas fa-chart-area"></i>
-                  <span>Seaborn</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fas fa-chart-pie"></i>
-                  <span>Plotly</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fas fa-th-large"></i>
-                  <span>Dash (Plotly)</span>
-                </div>
-              </div>
-            </article>
-            <article class="skill-category">
-              <h3 class="category-title">
-                <i class="fas fa-code-branch"></i>
-                Version Control
-              </h3>
-              <div class="skills-grid">
-                <div class="skill-card">
-                  <i class="fab fa-git-alt"></i>
-                  <span>Git</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fab fa-github"></i>
-                  <span>GitHub (Basics)</span>
-                </div>
-              </div>
-            </article>
-            <article class="skill-category">
-              <h3 class="category-title">
-                <i class="fas fa-brain"></i>
-                Soft Skills
-              </h3>
-              <div class="skills-grid">
-                <div class="skill-card">
-                  <i class="fas fa-puzzle-piece"></i>
-                  <span>Problem Solving</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fas fa-graduation-cap"></i>
-                  <span>Quick and Autonomous Learning</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fas fa-search"></i>
-                  <span>Attention to Details</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fas fa-handshake"></i>
-                  <span>Teamwork and Collaboration</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="skill-category">
-              <h3 class="category-title">
-                <i class="fas fa-language"></i>
-                Languages
-              </h3>
-              <div class="skills-grid">
-                <div class="skill-card">
-                  <i class="fas fa-flag"></i>
-                  <span>Arabic: Nativ</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fas fa-globe-americas"></i>
-                  <span>English: intermediate(B2)</span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section id="projects">
-        <div class="container">
-          <h2 class="fade-up">Featured Projects</h2>
-          <div class="project-grid">
-            <article class="project-card fade-up">
-              <div class="project-image">
-                <img
-                  src="static/images/19283.jpg"
-                  alt="Employee Management System Interface"
-                  loading="lazy"
-                />
-              </div>
-              <div class="info">
-                <h3 class="project-title">
-                  Employee Management System (Python)
-                </h3>
-                <ul>
-                  <li>
-                    Built a command-line application to manage employee records
-                    using Python and Object-Oriented Programming (OOP) with CSV
-                    file storage and retrieval.
-                  </li>
-                  <li>
-                    Implemented CRUD operations with in-memory dictionary
-                    storage and CSV file handling for persistent data storage.
-                  </li>
-                  <li>
-                    Applied problem-solving techniques and modular code design
-                    to ensure maintainability and scalability.
-                  </li>
-                </ul>
-                <div>
-                  <span class="tag">Python</span>
-                  <span class="tag">OOP</span>
-                  <span class="tag">CSV</span>
-                  <span class="tag">CRUD</span>
-                  <span class="tag">Problem Solving</span>
-                </div>
+              <div class="project-links">
                 <a
-                  href="https://github.com/yousefmohtady1/Depi-Python-Project"
-                  class="show-more-btn"
+                  href="https://github.com/yousefmohtady1/CorpGuideAI-HR-Policy-Assistant"
                   target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fab fa-github"></i>
-                  View on GitHub
-                </a>
-              </div>
-            </article>
-
-            <article class="project-card fade-up">
-              <div class="project-image">
-                <img
-                  src="static/images/Screenshot 2025-08-17 164147.png"
-                  alt="Web Scraping Task Interface"
-                  loading="lazy"
-                />
-              </div>
-              <div class="info">
-                <h3 class="project-title">Simple Web Scraping Task (Python)</h3>
-                <ul>
-                  <li>
-                    Extracted data from a test website using Beautiful Soup
-                    library and saved it into CSV and JSON files.
-                  </li>
-                  <li>
-                    Demonstrated skills in HTML parsing, data extraction, and
-                    file operations.
-                  </li>
-                </ul>
-                <div>
-                  <span class="tag">Python</span>
-                  <span class="tag">Beautiful Soup</span>
-                  <span class="tag">HTML Parsing</span>
-                  <span class="tag">CSV</span>
-                  <span class="tag">JSON</span>
-                </div>
+                  class="btn btn-sm"
+                  >View Code <ion-icon name="logo-github"></ion-icon
+                ></a>
                 <a
-                  href="https://github.com/yousefmohtady1/Depi-WepScraping-Task"
-                  class="show-more-btn"
+                  href="https://corp-guide-ai.vercel.app/"
                   target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i class="fab fa-github"></i>
-                  View on GitHub
-                </a>
-              </div>
-            </article>
-          </div>
-          <div class="show-more-container fade-up">
-            <a href="all_projects.html" class="show-more-btn">
-              <i class="fas fa-arrow-right"></i>
-              Show More Projects
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact">
-        <div class="container">
-          <h2 class="fade-up">Get In Touch</h2>
-          <div class="contact-container">
-            <form id="contactForm" class="contact-form fade-up" novalidate>
-              <div class="form-group">
-                <label for="name">Name *</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Enter your name"
-                  required
-                  autocomplete="name"
-                />
-              </div>
-              <div class="form-group">
-                <label for="email">Email *</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  required
-                  autocomplete="email"
-                />
-              </div>
-              <div class="form-group">
-                <label for="message">Message *</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Type your message here..."
-                  rows="5"
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" id="submitBtn" class="submit-btn">
-                <span class="btn-text">
-                  <i class="fas fa-paper-plane"></i>
-                  Send Message
-                </span>
-                <span class="btn-loading">
-                  <i class="fas fa-spinner fa-spin"></i>
-                  Sending...
-                </span>
-              </button>
-              <div id="messageResult" class="message-result"></div>
-            </form>
-
-            <div class="contact-info fade-up">
-              <div class="info-item">
-                <div class="info-icon">
-                  <i class="fas fa-envelope"></i>
-                </div>
-                <div class="info-content">
-                  <h3>Email</h3>
-                  <p>yosefmohtady@gmail.com</p>
-                </div>
-              </div>
-              <div class="info-item">
-                <div class="info-icon">
-                  <i class="fas fa-phone"></i>
-                </div>
-                <div class="info-content">
-                  <h3>Phone</h3>
-                  <p>+201095648730</p>
-                </div>
-              </div>
-              <div class="info-item">
-                <div class="info-icon">
-                  <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="info-content">
-                  <h3>Location</h3>
-                  <p>Giza, Egypt</p>
-                </div>
+                  class="btn btn-sm btn-outline"
+                  >Live Demo <ion-icon name="open-outline"></ion-icon
+                ></a>
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </main>
+        <div class="center-btn animate-on-scroll fade-up">
+          <a href="projects.html" class="btn btn-secondary"
+            >See All Projects <ion-icon name="arrow-forward-outline"></ion-icon
+          ></a>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-      <div class="footer-content">
-        <div class="footer-main">
-          <p>&copy; 2025 Yousef Mohtady. All rights reserved.</p>
-          <div class="social-icons">
-            <a
-              href="https://www.linkedin.com/in/yosef-mohtady-39749131a/"
-              class="social-icon"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn Profile"
-            >
-              <i class="fab fa-linkedin-in"></i>
-            </a>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll fade-up">Get In Touch</h2>
+        <div class="contact-content animate-on-scroll fade-up">
+          <p>
+            Feel free to reach out for collaborations or just a friendly hello
+          </p>
+          <div class="social-links">
             <a
               href="https://github.com/yousefmohtady1"
-              class="social-icon"
               target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub Profile"
-            >
-              <i class="fab fa-github"></i>
-            </a>
+              title="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
             <a
-              href="mailto:yosefmohtady@gmail.com"
-              class="social-icon"
-              aria-label="Send Email"
-            >
-              <i class="fas fa-envelope"></i>
-            </a>
+              href="https://www.kaggle.com/yosefmohtady"
+              target="_blank"
+              title="Kaggle"
+              ><i class="fab fa-kaggle"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/yosef-mohtady/"
+              target="_blank"
+              title="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://medium.com/@yosefmohtady"
+              target="_blank"
+              title="Medium"
+              ><i class="fab fa-medium"></i
+            ></a>
+            <a href="mailto:your.email@example.com" title="Email"
+              ><i class="fas fa-envelope"></i
+            ></a>
+            <a href="tel:+1234567890" title="Phone"
+              ><i class="fas fa-phone"></i
+            ></a>
           </div>
+
+          <!-- Contact Form -->
+          <form
+            id="contactForm"
+            class="contact-form animate-on-scroll fade-up"
+            novalidate
+            style="
+              margin-top: 3rem;
+              width: 100%;
+              max-width: 1000px;
+              margin-left: auto;
+              margin-right: auto;
+              text-align: left;
+            "
+          >
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+                autocomplete="name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+                autocomplete="email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Type your message here..."
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              id="submitBtn"
+              class="submit-btn btn btn-primary"
+              style="width: 100%; border: none"
+            >
+              <span class="btn-text">
+                <i class="fas fa-paper-plane" style="margin-right: 8px"></i>
+                Send Message
+              </span>
+              <span class="btn-loading" style="display: none">
+                <i class="fas fa-spinner fa-spin" style="margin-right: 8px"></i>
+                Sending...
+              </span>
+            </button>
+            <div
+              id="messageResult"
+              class="message-result"
+              style="margin-top: 1rem; font-weight: 500; text-align: center"
+            ></div>
+          </form>
         </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Yousef Mohtady. All rights reserved.</p>
       </div>
     </footer>
 
-    <script src="static/js/script.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
